@@ -6,8 +6,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
-@ComponentScan(basePackages= {"br.com.casadocodigo.loja", 
-		"br.com.casadocodigo.loja.controllers","br.com.casadocodigo.loja.contollers" })
+@ComponentScan(basePackages= "br.com.casadocodigo.loja")
 public class AppWebConfiguration {
 	
 	

@@ -7,9 +7,6 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 
 
-
-
-
 @Entity
 public class Product {
 	
