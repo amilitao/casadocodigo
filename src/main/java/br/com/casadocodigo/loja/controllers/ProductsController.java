@@ -27,6 +27,7 @@ public class ProductsController {
 		return "products/form";
 	}
 	
+	//teste de commit
 	
 	@RequestMapping("/produtos/form")
 	public String form(){
