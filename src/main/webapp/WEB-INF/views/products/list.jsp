@@ -18,9 +18,11 @@ charset=UTF-8">
 		<c:forEach items="${products}" var="product">
 			<tr>
 				<td>${product.title}</td>
-				<td><c:forEach items="${product.prices}" var="price">
-[${price.value} - ${price.bookType}]
-</c:forEach></td>
+				<td>
+					<c:forEach items="${product.prices}" var="price">
+						[${price.value} - ${price.bookType}]				
+					</c:forEach>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>

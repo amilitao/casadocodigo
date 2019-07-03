@@ -27,6 +27,13 @@ public class Product {
 	private List<Price> prices = new ArrayList<Price>();
 	
 	
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -44,9 +51,15 @@ public class Product {
 	}
 	public void setPages(int pages) {
 		this.pages = pages;
+	}	
+	
+	
+	public List<Price> getPrices() {
+		return prices;
 	}
-	
-	
+	public void setPrices(List<Price> prices) {
+		this.prices = prices;
+	}
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
