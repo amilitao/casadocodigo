@@ -13,9 +13,9 @@
 <body>
 
 
-	<form action="${spring:mvcUrl('saveProduct').build()}" method="post">
+	<form action="/casadocodigo/produtos" method="post">
 		<div>
-			<label for="title">Titulo </label> <input type="text" name="title"
+			<label for="title">Titulo  </label> <input type="text" name="title"
 				id="title" />
 		</div>
 		<div>
@@ -45,7 +45,7 @@
 		
 	<spring:hasBindErrors name="product">
 	<ul>
-		<c:forEach var="error" items="${erros.allErros}">
+		<c:forEach var="error" items="${errors.allErrors}">
 			<li>${error.code}</li>
 		</c:forEach>
 	</ul>

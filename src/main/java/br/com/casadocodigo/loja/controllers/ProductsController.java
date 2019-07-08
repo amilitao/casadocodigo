@@ -33,16 +33,16 @@ public class ProductsController {
 	
 	
 
-	@RequestMapping(method = RequestMethod.POST, name="saveProduct")
+	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView save(@Valid Product product, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 		
-		if(bindingResult.hasErrors()) {
-			return form();
+		if(bindingResult.hasErrors()) {			
+			return form();			
 		}
 		
 		productDAO.save(product);
 		redirectAttributes.addFlashAttribute("sucesso", "Produto cadastrado com sucesso");
-		return new ModelAndView("redirect:/produtos");
+		return new ModelAndView("redirect:produtos");
 	}
 	
 	
