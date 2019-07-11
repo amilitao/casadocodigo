@@ -36,7 +36,7 @@ public class Product {
 	private List<Price> prices = new ArrayList<Price>();
 	@DateTimeFormat(iso=ISO.DATE)
 	private Calendar releaseDate;	
-	@NotBlank
+	
 	private String summaryPath;
 	
 	public String getSummaryPath() {
