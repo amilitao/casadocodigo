@@ -1,5 +1,6 @@
 package br.com.casadocodigo.loja.models;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -83,11 +84,19 @@ public class Product {
 	public void setPrices(List<Price> prices) {
 		this.prices = prices;
 	}
+	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return this.getTitle() + "-" + this.getDescription() + "-" + this.getPages();
+		return "Produto [id=" + id + ", titulo=" + title + ", descricao="
+				+ description + ", numeroPaginas=" + pages + ", valores="
+				+ prices + "]";
 	}
-	
+
+	public BigDecimal priceFor(BookType bookType) {
+		return prices
+				.stream()
+				.filter(price -> price.getBookType().equals(bookType))
+				.findFirst().get().getValue();
+	}
 
 }
