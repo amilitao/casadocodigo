@@ -14,7 +14,7 @@
 
 <%-- <spring:hasBindErrors name="product"> --%>
 
-	<form:form action="/casadocodigo/produtos" method="post" commandName="product">
+	<form:form action="${spring:mvcUrl('PC#save').build()}" method="post" commandName="product" enctype="multipart/form-data">
 		<div>
 			<label for="title">Titulo  </label>
 			<form:input path="title"/>
@@ -41,6 +41,18 @@
 										
 			</div>
 		</c:forEach>
+		
+		<div>
+			<label for="releaseDate">Data de lançamento</label>
+			<form:input path="releaseDate" type="date"/>
+			<form:errors path="releaseDate" />
+		</div>
+		
+		<div>
+			<label for="summary">Sumario do livro</label>
+			<input type="file" name="summary" />
+			<form:errors path="summaryPath" />
+		</div>
 
 		<div>
 			<input type="submit" value="Enviar">
